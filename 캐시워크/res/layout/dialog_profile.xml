@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="280.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="280.0dip" android:src="@drawable/img_portrait_default" android:scaleType="centerCrop" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text_plain" android:layout_gravity="center" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:weightSum="1.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_gray_thin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rank" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text_plain" android:id="@id/rank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_gray_thin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step_total" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text_plain" android:id="@id/steps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

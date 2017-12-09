@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/adview_container" layout="@layout/adview_native_base" />
+    <View android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:gravity="center" android:id="@id/tv_review" android:background="@drawable/ad_btn_white" android:padding="@dimen/default_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ad_go_review" android:layout_weight="1.0" style="@style/CustomText_Subhead" />
+        <View android:id="@id/divider_btn" android:background="@color/colorPrimary" android:layout_width="0.100000024dip" android:layout_height="fill_parent" />
+        <TextView android:gravity="center" android:id="@id/tv_finish" android:background="@drawable/ad_btn_white" android:padding="@dimen/default_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/app_exit" android:layout_weight="1.0" style="@style/CustomText_Subhead" />
+    </LinearLayout>
+</LinearLayout>

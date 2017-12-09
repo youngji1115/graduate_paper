@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.cashwalk.cashwalk" platformBuildVersionCode="24" platformBuildVersionName="7.0">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.cashwalk.cashwalk.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.cashwalk.cashwalk.permission.C2D_MESSAGE"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.1"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.cashwalk.cashwalk.CashWalkApp" android:supportsRtl="true">
+        <activity android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.SplashActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme.NonTransparent" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="@string/kakaolink_host" android:scheme="@string/kakao_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.LoginActivity" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.TOSActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.SignupActivity" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.MainActivity" android:screenOrientation="portrait" android:theme="@style/MainTheme"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.CashWalkMainActivity" android:screenOrientation="portrait" android:theme="@style/MainTheme"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.CashWalkCommonWebviewActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/main_coupon" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.CouponActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/main_coupon" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.CouponDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.CouponActivity"/>
+        </activity>
+        <activity android:label="@string/signup_profile_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.ProfileActivity" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/main_viral" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.ViralActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/stepbet" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.StepBetIntroActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/rank" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.StepBetActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/write" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.StepBetTimelineAddActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.StepBetActivity"/>
+        </activity>
+        <activity android:label="@string/comment" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.StepBetTimelineDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.StepBetActivity"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.cashwalk.cashwalk.lockscreen.LockScreenActivity" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.lockscreen.LockScreenActivity19" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.cashwalk.cashwalk.lockscreen.WallpaperActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.FullScreen" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.lockscreen.LockScreenActivity"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.lockscreen.WallpaperActivity19" android:screenOrientation="portrait" android:theme="@style/AppTheme.FullScreen" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.lockscreen.LockScreenActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.cashwalk.cashwalk.activity.WebViewActivity" android:screenOrientation="portrait" android:theme="@style/WebViewTheme" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.lockscreen.LockScreenActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.cashwalk.cashwalk.util.ad.CashwalkAdWebView" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/main_store" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.ShopActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/main_store" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.ShopCategoryActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.ShopActivity"/>
+        </activity>
+        <activity android:label="@string/main_store" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.ShopItemActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.ShopCategoryActivity"/>
+        </activity>
+        <activity android:label="@string/main_lotto" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.LottoActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/main_lotto" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.LottoAdActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.LottoActivity"/>
+        </activity>
+        <activity android:label="@string/lotto_winner_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.LottoWinnerListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.LottoActivity"/>
+        </activity>
+        <activity android:label="@string/tab_stat" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.StatActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/main_point" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.TnkAdActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/tab_setting" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/settings_lockscreen_profile_quit" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.QuitActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.SettingsActivity"/>
+        </activity>
+        <activity android:label="@string/cash_history" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.CashHistoryActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.SettingsActivity"/>
+        </activity>
+        <activity android:label="@string/friend_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.friend.MyFriendListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/friend_title" android:name="com.cashwalk.cashwalk.activity.friend.FriendListActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:label="@string/profile_info" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.MyPageActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.SettingsActivity"/>
+        </activity>
+        <activity android:label="@string/myfeed_title" android:name="com.cashwalk.cashwalk.activity.friend.MyFeedActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:label="@string/myfeed_badge" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.activity.friend.MyEmblemActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.activity.friend.MyFeedActivity"/>
+        </activity>
+        <activity android:label="@string/auth_sms_title" android:name="com.cashwalk.cashwalk.activity.AuthSMSActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:label="@string/profile_image" android:name="com.cashwalk.cashwalk.util.CommonImageView" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:launchMode="standard" android:name="com.cashwalk.cashwalk.lockscreen.UrlShareActivity" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.util.PhotoViewActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.FullScreen"/>
+        <activity android:excludeFromRecents="true" android:name="com.cashwalk.cashwalk.util.AvoidSmartManagerActivity" android:taskAffinity=":avoidSmartManager" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:launchMode="standard" android:name="com.cashwalk.cashwalk.activity.AppLaunchActivity" android:screenOrientation="portrait" android:theme="@style/LockScreenTheme"/>
+        <activity android:label="@string/search_cashband_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.CashBandMainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.cashwalk.cashwalk.MainActivity"/>
+        </activity>
+        <activity android:label="@string/search_cashband_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSearchActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.CashBandMainActivity"/>
+        </activity>
+        <activity android:label="@string/heartrate_cashband_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandHeartRateActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.CashBandMainActivity"/>
+        </activity>
+        <activity android:label="@string/heartrate_record_cashband_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandHeartRateRecordActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandHeartRateActivity"/>
+        </activity>
+        <activity android:label="@string/sleep_cashband_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSleepActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.CashBandMainActivity"/>
+        </activity>
+        <activity android:label="@string/sleep_record_cashband_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSleepRecordActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandSleepActivity"/>
+        </activity>
+        <activity android:label="@string/band_send_notification_setting_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandNotiMainAppActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.CashBandMainActivity"/>
+        </activity>
+        <activity android:label="@string/band_send_notification_setting_other_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandNotiOtherAppActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandNotiMainAppActivity"/>
+        </activity>
+        <activity android:label="@string/band_setting_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSettingActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.CashBandMainActivity"/>
+        </activity>
+        <activity android:label="@string/band_setting_unlock_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSettingUnlockActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandSettingActivity"/>
+        </activity>
+        <activity android:label="@string/band_setting_vibrate_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSettingVibrateActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandSettingActivity"/>
+        </activity>
+        <activity android:label="@string/band_setting_vibrate_mode" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSettingVibrateModeActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandSettingVibrateActivity"/>
+        </activity>
+        <activity android:label="@string/band_setting_firmware_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSettingFirmwareActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandSettingActivity"/>
+        </activity>
+        <activity android:label="@string/band_setting_movement_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSettingMovementActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandSettingActivity"/>
+        </activity>
+        <activity android:label="@string/band_setting_sport_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandSettingSportActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.BandSettingActivity"/>
+        </activity>
+        <activity android:label="@string/band_how_to_use_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandHowToUseActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.CashBandMainActivity"/>
+        </activity>
+        <activity android:label="@string/band_how_to_use_title" android:launchMode="singleTask" android:name="com.cashwalk.cashwalk.cashband.BandCameraActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionbar">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".cashband.CashBandMainActivity"/>
+        </activity>
+        <activity android:name="com.cashwalk.cashwalk.util.FeedbackDialog" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="true" android:name="com.cashwalk.cashwalk.receiver.InstallReferrerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.cashwalk.cashwalk.util.AvoidSmartManagerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.cashwalk.cashwalk.lockscreen.LockScreenService">
+            <intent-filter>
+                <action android:name="com.cashwalk.cashwalk.START_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.cashwalk.cashwalk.receiver.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="io.fabric.ApiKey" android:value="8cc1e47e4c8d1799fc3843b7d7e2e55ad1b375ed"/>
+        <activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <service android:name="com.cashwalk.cashwalk.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.cashwalk.cashwalk.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <meta-data android:name="tnkad_app_id" android:value="a0c0a0f0-e051-9518-8159-150e0c010f0a"/>
+        <activity android:name="com.tnkfactory.ad.AdWallActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="2f38a974fd2323df01b77bebe4bd7149"/>
+        <activity android:label="@string/com_kakao_login_button" android:launchMode="singleTop" android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider225679834519054" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cashwalk.cashwalk.util.ad.helper.backpress.AdBackPressDialog" android:theme="@style/AppTheme.AdDialogTheme"/>
+        <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE"/>
+        <receiver android:name="com.cashwalk.cashwalk.receiver.PackageChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.cashwalk.cashwalk"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.cashwalk.cashwalk.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.esafirm.imagepicker.features.ImagePickerActivity" android:theme="@style/ef_AppTheme"/>
+        <provider android:authorities="com.cashwalk.cashwalk.imagepicker.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <provider android:authorities="com.cashwalk.cashwalk.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.ads.AudienceNetworkActivity"/>
+        <meta-data android:name="onesignal_app_id" android:value="fd5dee4f-0815-4f29-81d2-da412eaf7746"/>
+        <meta-data android:name="onesignal_google_project_number" android:value="str:REMOTE"/>
+        <receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter android:priority="999">
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.cashwalk.cashwalk"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.onesignal.NotificationOpenedReceiver"/>
+        <service android:name="com.onesignal.GcmIntentService"/>
+        <service android:name="com.onesignal.SyncService"/>
+        <activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.onesignal.NotificationRestoreService"/>
+        <receiver android:name="com.onesignal.BootUpReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.onesignal.UpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

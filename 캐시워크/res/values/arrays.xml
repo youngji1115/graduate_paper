@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="com_kakao_accounts_array">
+        <item>@string/com_kakao_kakaotalk_account</item>
+        <item>@string/com_kakao_other_kakaoaccount</item>
+        <item>@string/com_kakao_account_cancel</item>
+    </string-array>
+    <array name="lockscreen">
+        <item>@drawable/selector_button_lockscreen_unlock</item>
+        <item>@drawable/selector_button_lockscreen_tick</item>
+    </array>
+    <string-array name="lockscreen_off">
+        <item>@string/lockscreen_off_1</item>
+        <item>@string/lockscreen_off_4</item>
+        <item>@string/lockscreen_off_8</item>
+        <item>@string/lockscreen_off_day</item>
+        <item>@string/lockscreen_off_all</item>
+    </string-array>
+</resources>

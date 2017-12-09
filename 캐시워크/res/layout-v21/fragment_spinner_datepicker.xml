@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="250.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <DatePicker android:id="@id/dialog_date_datePicker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:spinnersShown="true" android:calendarViewShown="false" android:datePickerMode="spinner" />
+    <TextView android:textColor="@color/colorAccent" android:gravity="center" android:id="@id/tv_done" android:layout_width="60.0dip" android:layout_height="30.0dip" android:layout_marginBottom="12.0dip" android:text="선택" android:layout_below="@id/dialog_date_datePicker" android:layout_alignEnd="@id/dialog_date_datePicker" />
+    <TextView android:textColor="#ff4b4b4b" android:gravity="center" android:id="@id/tv_cancel" android:layout_width="60.0dip" android:layout_height="30.0dip" android:layout_marginBottom="12.0dip" android:text="취소" android:layout_below="@id/dialog_date_datePicker" android:layout_toStartOf="@id/tv_done" />
+</RelativeLayout>

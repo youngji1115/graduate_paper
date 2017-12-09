@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_comming_image" android:layout_width="140.0dip" android:layout_height="187.0dip" android:src="@drawable/img_badge_empty" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="15.0sp" android:textColor="#7f383838" android:gravity="center_horizontal" android:id="@id/tv_temp_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:text="서비스 준비중입니다." android:layout_below="@id/iv_comming_image" />
+</RelativeLayout>

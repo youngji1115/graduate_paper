@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_more_loding">
+        <RelativeLayout android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v4.widget.SwipeRefreshLayout android:id="@id/refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:background="#fff2f2f2" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </LinearLayout>
+            <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/rl_error" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="13.0sp" android:textColor="#7f000000" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="35.0dip" android:text="@string/error_try_again" android:lineSpacingExtra="5.0sp" />
+    </RelativeLayout>
+    <com.melnykov.fab.FloatingActionButton android:id="@id/fab_add_post" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_margin="16.0dip" android:src="@drawable/ic_floating_add" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:fab_colorPressed="@color/colorPrimaryDark" app:fab_colorNormal="@color/colorPrimary" app:fab_colorRipple="@color/colorPrimary" />
+    <RelativeLayout android:gravity="center" android:id="@id/rl_more_loding" android:background="#fff2f2f2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true">
+        <ProgressBar android:layout_gravity="center" android:layout_width="30.0dip" android:layout_height="30.0dip" style="?android:attr/progressBarStyle" />
+    </RelativeLayout>
+</RelativeLayout>

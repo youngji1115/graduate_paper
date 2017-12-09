@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/action_coach" android:orderInCategory="100" android:title="@string/lockscreen_change_coach" app:showAsAction="never" />
+    <item android:id="@id/action_bg" android:orderInCategory="200" android:title="@string/lockscreen_change_bg" app:showAsAction="never" />
+    <item android:id="@id/action_feedback" android:orderInCategory="300" android:title="@string/send_feedback" app:showAsAction="never" />
+    <item android:id="@id/action_tutorial" android:orderInCategory="400" android:title="@string/finish_tutorial" app:showAsAction="never" />
+    <item android:id="@id/action_settings" android:orderInCategory="500" android:title="@string/tab_setting" app:showAsAction="never" />
+</menu>

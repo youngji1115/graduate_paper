@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:gravity="center" android:id="@id/rl_barcode_info" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_item_barcode" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="35.0dip" android:scaleType="centerCrop" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                <ProgressBar android:id="@id/progress" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyle" />
+            </RelativeLayout>
+            <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="#ff383838" android:gravity="center" android:id="@id/tv_barcode_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="35.0dip" android:text="\ 90384810329840" />
+            </RelativeLayout>
+            <View android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RelativeLayout android:id="@id/rl_item_info" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="90.0dip">
+                <ImageView android:id="@id/iv_item_image" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginLeft="12.0dip" android:layout_centerVertical="true" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_marginTop="17.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="17.0dip" android:layout_toEndOf="@id/iv_item_image">
+                    <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:gravity="right" android:id="@id/tv_brand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/tv_item_name" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+                    <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:gravity="right" android:id="@id/tv_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_above="@id/tv_expire" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:gravity="right" android:id="@id/tv_expire" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_event_instagram" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="364.0dip" android:layout_marginTop="10.0dip">
+                <RelativeLayout android:gravity="center|top" android:id="@id/rl_instagram_event_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_above="@id/tv_instagram_event_msg" android:layout_alignParentStart="true">
+                    <ImageView android:id="@id/iv_instagram_logo" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/img_instagramicon" />
+                    <TextView android:textSize="16.0sp" android:textColor="#ff383838" android:gravity="center" android:id="@id/tv_instagram_event_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/event_instagram_title" android:layout_alignBottom="@id/iv_instagram_logo" android:layout_alignParentTop="true" android:layout_toEndOf="@id/iv_instagram_logo" />
+                </RelativeLayout>
+                <TextView android:textSize="12.0sp" android:textColor="#7f383838" android:id="@id/tv_instagram_event_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="12.0dip" android:text="@string/event_instagram_info" android:layout_above="@id/iv_instagram_event_banner" />
+                <ImageView android:orientation="vertical" android:id="@id/iv_instagram_event_banner" android:layout_width="fill_parent" android:layout_height="198.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/img_instagram_big" android:layout_above="@id/rl_share_instagram" />
+                <RelativeLayout android:id="@id/rl_share_instagram" android:background="#ffffd200" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff5e5050" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/event_instagram_btn" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_item_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="70.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="#7f383838" android:id="@id/tv_item_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

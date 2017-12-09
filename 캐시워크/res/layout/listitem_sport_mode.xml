@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_mode_icon" android:layout_width="fill_parent" android:layout_height="70.0dip" android:src="@drawable/img_plank_n" />
+    <TextView android:textSize="15.0sp" android:textColor="#80383838" android:gravity="center" android:id="@id/tv_mode_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="플랭크" />
+</LinearLayout>

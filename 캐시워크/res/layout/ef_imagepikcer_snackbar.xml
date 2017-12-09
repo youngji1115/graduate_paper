@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/ef_white" android:id="@id/ef_snackbar_txt_bottom_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_toLeftOf="@id/ef_snackbar_btn_action" android:layout_centerVertical="true" android:layout_toStartOf="@id/ef_snackbar_btn_action" />
+    <Button android:textColor="?colorPrimary" android:id="@id/ef_snackbar_btn_action" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+</merge>

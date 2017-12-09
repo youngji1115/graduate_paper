@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/li_menu_box" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="#89000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="@string/report" />
+                <RadioButton android:id="@id/radio_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="#89000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="음란성 또는 청소년에게 부적함한 내용" />
+                <RadioButton android:id="@id/radio_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="#89000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="특정인 대상의 비방/욕설" />
+                <RadioButton android:id="@id/radio_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="#89000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="23.0dip" android:text="@string/report_msg" android:lineSpacingExtra="6.0sp" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip" android:weightSum="2.0" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/rl_send_feedback" android:background="#ffff4141" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textColor="#fffefefe" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/report" android:lineSpacingExtra="3.0sp" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_cancel_feedback" android:background="#ffffd200" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textColor="#ff5e5050" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/report_cancel" android:lineSpacingExtra="3.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

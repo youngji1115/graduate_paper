@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/pager" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/iv_watermark_image" android:visibility="invisible" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="6.0dip" android:src="@drawable/img_watermark_white" />
+    </RelativeLayout>
+    <include android:layout_gravity="right" android:id="@id/drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/drawer" />
+</android.support.v4.widget.DrawerLayout>

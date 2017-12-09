@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginBottom="16.0dip">
+                <ImageView android:id="@id/iv_profile_image" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/img_portrait_default" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/profile" android:layout_centerVertical="true">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/tv_email" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="cashwalkID" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/point_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/point" android:drawableLeft="@drawable/ic_store_coin" android:drawablePadding="2.0dip" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/tv_point" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:id="@id/tv_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/iv_profile_image" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_update_profile" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="71.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/settings_lockscreen_profile_profile" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:textColor="#89010101" android:id="@id/tv_edit_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="42.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_my_invite_code" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/invite_code_title" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:textColor="#89010101" android:id="@id/tv_my_invite_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="42.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_height" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/settings_lockscreen_profile_height" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:textColor="#89010101" android:id="@id/tv_height" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="42.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_weight" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/settings_lockscreen_profile_weight" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:textColor="#89010101" android:id="@id/tv_weight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="42.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_my_point_history" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/cash_history" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_reset_contacts" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/friend_contacts_disable_sync" />
+                <ImageView android:id="@id/imageView7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_reset_facebook" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/friend_facebook_disable_sync" />
+                <ImageView android:id="@id/imageView8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_logout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/settings_lockscreen_profile_logout" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_quit" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="71.0dip" android:layout_marginTop="1.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#89010101" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="30.0dip" android:text="@string/settings_lockscreen_profile_quit" />
+                <ImageView android:id="@id/imageView6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:src="@drawable/ic_next_a" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

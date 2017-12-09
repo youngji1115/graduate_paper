@@ -1,0 +1,80 @@
+.class final Lcom/kakao/usermgmt/UserManagement$3;
+.super Lcom/kakao/network/tasks/KakaoResultTask;
+.source "UserManagement.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/kakao/usermgmt/UserManagement;->requestUnlink(Lcom/kakao/usermgmt/callback/UnLinkResponseCallback;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kakao/network/tasks/KakaoResultTask",
+        "<",
+        "Ljava/lang/Long;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Lcom/kakao/network/callback/ResponseCallback;)V
+    .locals 0
+
+    .prologue
+    .line 90
+    .local p1, "x0":Lcom/kakao/network/callback/ResponseCallback;, "Lcom/kakao/network/callback/ResponseCallback<Ljava/lang/Long;>;"
+    invoke-direct {p0, p1}, Lcom/kakao/network/tasks/KakaoResultTask;-><init>(Lcom/kakao/network/callback/ResponseCallback;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public call()Ljava/lang/Long;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .prologue
+    .line 93
+    invoke-static {}, Lcom/kakao/usermgmt/api/UserApi;->requestUnlink()Lcom/kakao/usermgmt/response/UserResponse;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kakao/usermgmt/response/UserResponse;->getUserId()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic call()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .prologue
+    .line 90
+    invoke-virtual {p0}, Lcom/kakao/usermgmt/UserManagement$3;->call()Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+.end method

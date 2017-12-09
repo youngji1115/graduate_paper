@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="120.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <ImageView android:id="@id/iv_movement_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_movement" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_movement_title" android:layout_toRightOf="@id/iv_movement_icon" />
+                <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_movement" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="false" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="50.0dip" android:layout_marginRight="70.0dip" android:text="@string/band_setting_movement_description" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/rl_term" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_term_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_alarm" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_movement_term" android:layout_toRightOf="@id/iv_term_icon" />
+            <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_term_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/iv_term_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/ic_right_brown" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_set_term" android:background="#fffbfbfb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginTop="1.0dip">
+            <View android:id="@id/view_center_line" android:background="#ffc7c7c7" android:layout_width="15.0dip" android:layout_height="2.0dip" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:layout_centerInParent="true" />
+            <NumberPicker android:id="@id/np_set_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/view_center_line" />
+            <NumberPicker android:id="@id/np_set_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/view_center_line" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_repeat" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_repeat_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_repetition" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_movement_repeat" android:layout_toRightOf="@id/iv_repeat_icon" />
+            <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_repeat_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/iv_repeat_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/ic_right_brown" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_set_repeat" android:background="#fffbfbfb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:weightSum="7.0">
+                <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_set_repeat_mon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="월" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_set_repeat_tou" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="화" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_set_repeat_wed" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="수" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_set_repeat_thu" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="목" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_set_repeat_fri" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="금" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_set_repeat_sar" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="토" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_set_repeat_sun" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="일" android:layout_weight="1.0" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_lunch_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_donotdisturb" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/iv_lunch_icon" android:layout_centerVertical="true">
+                <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/band_setting_movement_lunch" />
+                <TextView android:textSize="10.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="32.0dip" android:text="@string/band_setting_movement_lunch_time" android:layout_alignParentRight="true" />
+            </LinearLayout>
+            <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_lunch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="false" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

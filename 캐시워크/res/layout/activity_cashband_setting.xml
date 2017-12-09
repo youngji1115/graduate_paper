@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#fff3f3f3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/band_setting_basic" />
+        <RelativeLayout android:id="@id/rl_unlock" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <ImageView android:id="@id/iv_unlock_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_bend_unlock" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_basic_lock" android:layout_toRightOf="@id/iv_unlock_icon" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_vibrate" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_vibrate_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_vibration" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_basic_vibrate" android:layout_toRightOf="@id/iv_vibrate_icon" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_firmware" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_firmware_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_firmwareupdate" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_basic_firmware" android:layout_toRightOf="@id/iv_firmware_icon" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/band_setting_data_type" />
+        <RelativeLayout android:id="@id/rl_time" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <ImageView android:id="@id/iv_time_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_alarm" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_data_type_time" android:layout_toRightOf="@id/iv_time_icon" />
+            <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_time_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_temp" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_temp_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_temperature" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_data_type_temp" android:layout_toRightOf="@id/iv_temp_icon" />
+            <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_temp_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_date" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_date_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_calendar" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_data_type_date" android:layout_toRightOf="@id/iv_date_icon" />
+            <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_date_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_meter" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_meter_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_measure" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_data_type_meter" android:layout_toRightOf="@id/iv_meter_icon" />
+            <TextView android:textSize="15.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_meter_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/band_setting_move" />
+        <RelativeLayout android:id="@id/rl_movement" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <ImageView android:id="@id/iv_movement_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_movement" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_move_movement" android:layout_toRightOf="@id/iv_movement_icon" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_sport" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_sport_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_movementsetting" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_move_activity" android:layout_toRightOf="@id/iv_sport_icon" />
+            <ImageView android:layout_width="6.0dip" android:layout_height="10.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_auto_heart" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_auto_heart_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_cashband_heartrate" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_move_auto_heart" android:layout_toRightOf="@id/iv_auto_heart_icon" />
+            <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_auto_heart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_auto_sleep" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_auto_sleep_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_cashband_sleep" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_setting_move_auto_sleep" android:layout_toRightOf="@id/iv_auto_sleep_icon" />
+            <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_auto_sleep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

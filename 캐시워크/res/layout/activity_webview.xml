@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/colorAccent" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/top" android:background="@color/grey" android:paddingLeft="4.0dip" android:paddingTop="6.0dip" android:paddingRight="4.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <ImageButton android:id="@id/close" android:background="@null" android:padding="4.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/btn_naviclose" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <EditText android:textSize="16.0sp" android:textColor="@color/colorAccent" android:layout_gravity="center" android:id="@id/url" android:background="@color/white" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginRight="4.0dip" android:cursorVisible="false" android:maxLines="1" android:lines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_toLeftOf="@id/share" android:layout_toRightOf="@id/close" android:inputType="textUri" android:imeOptions="actionSearch" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/colorAccent" android:id="@id/share" android:background="@drawable/selector_bg_transparent_all" android:padding="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="36.0dip" android:text="@string/share" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/line_top" android:background="@color/text_gray_thin" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/top" />
+    <com.cashwalk.cashwalk.util.ObservableWebView android:id="@id/webview" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/adView" android:layout_below="@id/line_top" />
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_below="@id/top" style="@android:style/Widget.ProgressBar.Horizontal" />
+    <FrameLayout android:id="@id/adView" android:background="@color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/suggest" android:background="@color/grey" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/top">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/grey" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/naver" android:background="@color/grey" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3333">
+                <ImageView android:background="@color/grey" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/btn_naver" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/colorAccent" android:background="@color/grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/naver" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/daum" android:background="@color/grey" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3333">
+                <ImageView android:background="@color/grey" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/btn_daum" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/colorAccent" android:background="@color/grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/daum" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/google" android:background="@color/grey" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3333">
+                <ImageView android:background="@color/grey" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/btn_google" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/colorAccent" android:background="@color/grey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/google" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

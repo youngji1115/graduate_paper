@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_main" android:background="@drawable/selector_bg_white" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+        <ImageView android:id="@id/image" android:background="@color/colorAccent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginLeft="2.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="2.0dip" android:scaleType="centerCrop" />
+        <RelativeLayout android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/profile" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_toRightOf="@id/profile" android:layout_centerVertical="true">
+                <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray_thin" android:gravity="center|left" android:id="@id/rank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:drawableLeft="@drawable/ic_rank" android:drawablePadding="-4.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray_thin" android:id="@id/ago" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text_gray_thin" android:gravity="center|left" android:id="@id/address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:drawableLeft="@drawable/ic_map_marker" android:drawablePadding="-4.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_gray_thin" android:ellipsize="end" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:maxLines="12" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="3.0">
+            <TextView android:textSize="13.0sp" android:textColor="@color/text_gray_thin" android:gravity="center|left" android:id="@id/like" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/like_count" android:drawableLeft="@drawable/ic_favorite_n" android:drawablePadding="4.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/text_gray_thin" android:gravity="center|left" android:id="@id/comment" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/comment_count" android:drawableLeft="@drawable/ic_forums" android:drawablePadding="4.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/text_gray_thin" android:gravity="center|left" android:id="@id/feedback" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/report" android:drawableLeft="@drawable/ic_warninglight" android:drawablePadding="2.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

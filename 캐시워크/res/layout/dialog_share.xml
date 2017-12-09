@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/rl_share_popup" android:background="#00000000" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/relativeLayout" android:background="#ffffffff" android:layout_width="328.0dip" android:layout_height="413.0dip">
+            <RelativeLayout android:id="@id/rl_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/share_chart" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_image_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:layout_below="@id/rl_title_layout">
+                <ImageView android:id="@id/iv_info_image" android:layout_width="256.0dip" android:layout_height="149.0dip" android:src="@drawable/img_main_share" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="13.0sp" android:textColor="#d9000000" android:gravity="center" android:id="@id/tv_body_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/share_chart_msg" android:layout_below="@id/iv_info_image" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_share_box_layout" android:layout_width="327.0dip" android:layout_height="wrap_content" android:layout_marginBottom="41.0dip" android:layout_alignParentBottom="true">
+                <View android:background="#ffd2d2d2" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentTop="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="17.0dip" android:weightSum="1.0">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/li_kakao" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.25">
+                            <ImageView android:background="@null" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/btn_kakao" android:scaleType="fitXY" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/color_010101" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/kakao" android:alpha="0.54" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/li_band" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.25">
+                            <ImageView android:background="@null" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/btn_band" android:scaleType="fitXY" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/color_010101" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/band" android:alpha="0.54" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/li_facebook" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.25">
+                            <ImageView android:background="@null" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/btn_facebook" android:scaleType="fitXY" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/color_010101" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/facebook" android:alpha="0.54" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/li_etc" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.25">
+                            <ImageView android:background="@null" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/btn_etc" android:scaleType="fitXY" />
+                            <TextView android:textSize="12.0sp" android:textColor="@color/color_010101" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/etc" android:alpha="0.54" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="#ffd2d2d2" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tv_cancel" android:layout_width="wrap_content" android:layout_height="41.0dip" android:layout_marginRight="18.0dip" android:text="@string/cancel" android:layout_alignParentBottom="true" android:layout_alignEnd="@id/rl_share_box_layout" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/background" android:scaleType="centerCrop" />
+    <View android:background="@color/black_filter" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="72.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentTop="true">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/signup_profile_title" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/signup_profile_desc" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|left|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="32.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="32.0dip" android:layout_above="@id/next" android:layout_below="@id/top">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/profile_image" />
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@id/profile" android:layout_width="120.0dip" android:layout_height="120.0dip" android:layout_marginTop="8.0dip" android:src="@drawable/img_portrait_default" android:scaleType="fitXY" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/nickname" />
+            <EditText android:textSize="18.0sp" android:textColor="@color/white" android:textColorHint="@color/text_gray" android:gravity="center" android:id="@id/weight" android:background="@color/black_50" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="8.0dip" android:hint="@string/signup_profile_input_edit" android:lines="1" android:singleLine="true" android:inputType="number" />
+        </LinearLayout>
+        <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@id/next" android:background="@drawable/selector_bg_next" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="@string/confirm" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

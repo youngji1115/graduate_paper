@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_base_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/li_cashwalk_notice_layout" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="#ff097eff" android:layout_width="fill_parent" android:layout_height="35.0dip">
+                <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/iv_notice_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_notice" android:layout_centerVertical="true" />
+                    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:text="공지사항" android:layout_alignParentTop="true" android:layout_toEndOf="@id/iv_notice_icon" />
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center|right" android:id="@id/rl_close_notice" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="11.0dip" android:src="@drawable/btn_close_white" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <ImageView android:id="@id/iv_notice_profile_image" android:layout_width="31.0dip" android:layout_height="31.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/im_profile" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:ellipsize="end" android:gravity="center|left" android:id="@id/tv_notice_profile_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="캐시워크 운영자" android:maxLines="1" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:lineSpacingExtra="3.0sp" android:layout_toEndOf="@id/iv_notice_profile_image" />
+                <TextView android:textSize="12.0sp" android:textColor="#7f383838" android:gravity="center" android:id="@id/tv_notice_item_hit_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_marginRight="16.0dip" android:text="조회수 2,345회" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <View android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/rl_notice_body_text_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff383838" android:ellipsize="end" android:id="@id/tv_notice_body_text_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="캐시워크 에서 알려드립니다." android:maxLines="1" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:ellipsize="end" android:id="@id/tv_notice_body_text_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="욕하지마세요. 욕하지마세요. 욕하지마세요 욕하지마세요 욕하지마세요 욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요.욕하지마세요." android:maxLines="5" />
+            </LinearLayout>
+            <View android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/rl_content_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/rl_body_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/rl_top_layout" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                    <ImageView android:id="@id/iv_profile_image" android:layout_width="31.0dip" android:layout_height="31.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/im_profile" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+                    <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:ellipsize="end" android:gravity="center|left" android:id="@id/tv_profile_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:maxLines="1" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:lineSpacingExtra="3.0sp" android:layout_toEndOf="@id/iv_profile_image" />
+                    <RelativeLayout android:id="@id/rl_location_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_alignParentTop="true" android:layout_toStartOf="@id/tv_item_date" android:layout_toEndOf="@id/tv_profile_nickname">
+                        <ImageView android:id="@id/imageView13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/ic_map_marker" android:layout_centerVertical="true" />
+                        <TextView android:textSize="12.0sp" android:textColor="#7f383838" android:gravity="center|left" android:id="@id/tv_location_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" android:layout_alignParentTop="true" android:layout_toEndOf="@id/imageView13" />
+                    </RelativeLayout>
+                    <TextView android:textSize="12.0sp" android:textColor="#7f383838" android:gravity="center" android:id="@id/tv_item_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <View android:background="#ffececec" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/rl_image_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.cashwalk.cashwalk.util.SquareImageView android:id="@id/iv_body_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/rl_body_text_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+                    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff383838" android:ellipsize="end" android:id="@id/tv_body_text_title" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:maxLines="1" android:maxLength="50" />
+                    <TextView android:textSize="13.0sp" android:textColor="#ff383838" android:id="@id/tv_body_text_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="10" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/rl_foot_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="#ffececec" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                        <TextView android:textSize="12.0sp" android:textColor="#7f383838" android:gravity="center" android:id="@id/tv_hit_count" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                        <TextView android:textSize="12.0sp" android:textColor="#7f383838" android:gravity="center" android:id="@id/tv_like_comment_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <View android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0">
+                            <RelativeLayout android:gravity="center" android:id="@id/rl_like_btn" android:background="@drawable/selector_bg_story_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                <ImageView android:id="@id/iv_like_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_favorite_n" android:layout_centerVertical="true" />
+                                <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:text="좋아요" android:layout_alignParentTop="true" android:layout_toEndOf="@id/iv_like_icon" />
+                            </RelativeLayout>
+                            <RelativeLayout android:gravity="center" android:id="@id/rl_comment_btn" android:background="@drawable/selector_bg_story_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                <ImageView android:id="@id/iv_comment_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_forums" android:layout_centerVertical="true" />
+                                <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:text="댓글달기" android:layout_alignParentTop="true" android:layout_toEndOf="@id/iv_comment_icon" />
+                            </RelativeLayout>
+                            <RelativeLayout android:gravity="center" android:id="@id/rl_report_btn" android:background="@drawable/selector_bg_story_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                <ImageView android:id="@id/iv_report_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_warninglight" android:layout_centerVertical="true" />
+                                <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:text="신고하기" android:layout_alignParentTop="true" android:layout_toEndOf="@id/iv_report_icon" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <View android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

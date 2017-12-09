@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ef_imagepicker_toolbar" />
+    <TextView android:textSize="@dimen/ef_font_medium" android:id="@id/tv_empty_images" android:padding="@dimen/ef_spacing_double" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ef_msg_empty_images" android:layout_centerInParent="true" />
+    <com.esafirm.imagepicker.view.ProgressWheel android:id="@id/progress_bar" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_centerInParent="true" app:ef_matProg_progressIndeterminate="true" app:ef_matProg_barColor="@color/ef_teal" />
+    <android.support.v7.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
+    <com.esafirm.imagepicker.view.SnackBarView android:id="@id/ef_snackbar" android:background="@color/ef_black_alpha_aa" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignBottom="@id/recyclerView" android:layout_alignParentBottom="true" />
+</RelativeLayout>

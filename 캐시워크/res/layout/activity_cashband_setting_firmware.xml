@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="58.0dip" android:layout_centerHorizontal="true">
+            <RelativeLayout android:id="@id/rl_firmware_progress" android:visibility="gone" android:layout_width="195.0dip" android:layout_height="195.0dip" android:layout_centerHorizontal="true">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_firmware" android:layout_centerInParent="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <TextView android:textSize="18.0sp" android:textColor="#ff007aff" android:gravity="center" android:id="@id/tv_progress_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="40.0sp" android:id="@id/tv_progress_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                        <TextView android:textSize="20.0sp" android:id="@id/tv_progress_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/tv_progress_value" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <at.grabner.circleprogress.CircleProgressView android:id="@id/cpv_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cpv_textSize="0.0sp" app:cpv_value="0.0" app:cpv_maxValue="100.0" app:cpv_barWidth="3.0dip" app:cpv_barColor="#ff007aff" app:cpv_rimColor="#80f2f2f2" app:cpv_rimWidth="3.0dip" app:cpv_outerContourSize="0.0dip" app:cpv_innerContourSize="0.0dip" app:cpv_seekMode="true" />
+            </RelativeLayout>
+            <TextView android:gravity="center" android:id="@id/tv_firmware_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_below="@id/rl_firmware_progress" android:layout_centerHorizontal="true" android:lineSpacingExtra="8.0sp" />
+            <TextView android:gravity="center" android:id="@id/tv_firmware_btn" android:layout_width="200.0dip" android:layout_height="50.0dip" android:layout_marginTop="25.0dip" android:layout_below="@id/tv_firmware_description" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/iv_firmware_line_1" android:visibility="gone" android:layout_width="296.0dip" android:layout_height="3.0dip" android:layout_marginTop="20.0dip" android:src="@drawable/img_firmwareline" android:layout_below="@id/tv_firmware_btn" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:gravity="center" android:id="@id/tv_firmware_click_here" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_below="@id/iv_firmware_line_1" android:layout_centerHorizontal="true" android:lineSpacingExtra="6.0sp" />
+            <ImageView android:id="@id/iv_firmware_line_2" android:visibility="gone" android:layout_width="296.0dip" android:layout_height="3.0dip" android:layout_marginTop="20.0dip" android:src="@drawable/img_firmwareline" android:layout_below="@id/tv_firmware_click_here" android:layout_centerHorizontal="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/li_update_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="19.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="32.0dip" android:layout_below="@id/iv_firmware_line_2">
+                <TextView android:textSize="15.0sp" android:textColor="#ff197cf3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/band_setting_firmware_failed_solution_title" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_update_error_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:lineSpacingExtra="10.0sp" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_update_error_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:lineSpacingExtra="10.0sp" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_update_error_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:lineSpacingExtra="10.0sp" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_update_error_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:lineSpacingExtra="10.0sp" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_update_error_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:lineSpacingExtra="10.0sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

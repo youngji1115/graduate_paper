@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="colorAccent">#ff403535</item>
+    <item type="drawable" name="colorPrimary">#ffffd200</item>
+    <item type="drawable" name="colorPrimaryDark">#ffffc107</item>
+    <item type="drawable" name="color_fafafa">#fffafafa</item>
+    <item type="drawable" name="grey">#ffececec</item>
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="notification_template_icon_low_bg">#0cffffff</item>
+    <item type="drawable" name="transparent">#00000000</item>
+    <item type="drawable" name="white">#ffffffff</item>
+</resources>

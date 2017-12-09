@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="280.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text_plain" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/shop_purchase_short" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_gray_thin" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/shop_purchase_short_desc" />
+        <LinearLayout android:gravity="center" android:id="@id/review" android:background="@drawable/selector_btn_review" android:padding="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_coin" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/offerwall" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/friend" android:background="@drawable/selector_btn_review" android:padding="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_coin" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/invite" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="right" android:id="@id/video_ad" android:background="@drawable/selector_btn_review" android:padding="12.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_coin" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/offerwall_video" />
+        </LinearLayout>
+        <Button android:textSize="16.0sp" android:textColor="@color/colorAccent" android:id="@id/confirm" android:background="@drawable/selector_bg_next" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/confirm" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+</RelativeLayout>

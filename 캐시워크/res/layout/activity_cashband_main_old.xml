@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <RelativeLayout android:id="@id/rl_actionbar_mypage_btn" android:layout_width="48.0dip" android:layout_height="48.0dip">
+            <ImageView android:id="@id/ib_myprofile" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/btn_mypage" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <RelativeLayout android:id="@id/rl_mypage_request_count" android:background="@drawable/bg_circle_request_count" android:layout_width="17.0dip" android:layout_height="17.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:layout_alignParentTop="true" android:layout_alignParentEnd="true">
+                <TextView android:textSize="8.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tv_mypage_request_count" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="99+" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_cashwalk" android:layout_centerInParent="true" />
+        <ImageButton android:id="@id/setting" android:background="@drawable/selector_bg_yellow" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_setting" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/ib_share" android:background="@drawable/selector_bg_yellow" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="48.0dip" android:src="@drawable/btn_share" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <Button android:id="@id/btn_find_cashband" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="캐시밴드 연결" />
+    <TextView android:id="@id/band_info" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/btn_user_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="유저 정보 입력" />
+        <Button android:id="@id/btn_hour_chn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="시간단위" />
+        <Button android:id="@id/btn_vibrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="진동 설정" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/btn_alarm_1_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="디비데이터 호출" />
+        <Button android:id="@id/btn_alarm_1_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="알람 1 취소" />
+        <Button android:id="@id/btn_alarm_2_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="알람 2 입력" />
+        <Button android:id="@id/btn_alarm_2_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="알람 2 취소" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/btn_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="refresh" />
+        <Button android:id="@id/btn_fmInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="펌웨어버전" />
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

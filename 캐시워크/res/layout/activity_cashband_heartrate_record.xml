@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_calendar_top_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/iv_left_btn" android:padding="5.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="9.0dip" android:src="@drawable/selector_btn_left" android:layout_centerVertical="true" />
+        <LinearLayout android:id="@id/li_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_calendar" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff383838" android:gravity="center_vertical" android:id="@id/tv_calendar_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" />
+        </LinearLayout>
+        <ImageView android:id="@id/iv_right_btn" android:padding="5.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="9.0dip" android:src="@drawable/selector_btn_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_chart_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_below="@id/rl_calendar_top_bar">
+        <com.github.mikephil.charting.charts.CombinedChart android:id="@id/chart_line_heartrate_record" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" />
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="22.0dip" android:layout_below="@id/chart_line_heartrate_record">
+            <View android:background="#ffff5656" android:layout_width="25.0dip" android:layout_height="10.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:text="@string/heartrate_cashband_high" />
+            <View android:background="#ffffdddd" android:layout_width="25.0dip" android:layout_height="10.0dip" android:layout_marginLeft="18.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:text="@string/heartrate_cashband_low" android:layout_alignParentRight="true" />
+            <ImageView android:layout_width="25.0dip" android:layout_height="10.0dip" android:layout_marginLeft="18.0dip" android:src="@drawable/img_heartbeat" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:text="@string/heartrate_cashband_avg" android:layout_alignParentRight="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/li_total_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="153.0dip" android:layout_marginTop="1.0dip" android:layout_below="@id/rl_chart_layout">
+        <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heartrate_cashband_avg" />
+        <TextView android:textSize="25.0sp" android:textColor="#ff383838" android:id="@id/tv_heartrate_avg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginBottom="18.0dip" android:text="@string/cashband_menu_text_bpm" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heartrate_cashband_description" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0dip" android:weightSum="2.0" android:layout_below="@id/li_total_layout">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heartrate_cashband_high" />
+            <TextView android:textSize="25.0sp" android:textColor="#ff383838" android:id="@id/tv_heartrate_high" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/cashband_menu_text_bpm" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heartrate_cashband_low" />
+            <TextView android:textSize="25.0sp" android:textColor="#ff383838" android:id="@id/tv_heartrate_low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/cashband_menu_text_bpm" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_calendar" android:background="#80000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_calendar_top_bar">
+        <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="167.0dip">
+            <View android:background="#fff2f2f2" android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="56.0dip" android:layout_marginRight="16.0dip" />
+            <com.cashwalk.cashwalk.cashband.util.CustomCalendarView android:id="@id/dp_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <View android:background="#fff2f2f2" android:layout_width="wrap_content" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="56.0dip" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_centerInParent="true" />
+</RelativeLayout>

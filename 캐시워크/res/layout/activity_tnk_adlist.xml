@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/fr_tabs" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.astuetz.PagerSlidingTabStrip android:id="@id/st_tab_layout" android:layout_width="fill_parent" android:layout_height="48.0dip" app:pstsIndicatorColor="@color/colorAccent" app:pstsIndicatorHeight="4.0dip" app:pstsShouldExpand="true" />
+        </FrameLayout>
+        <RelativeLayout android:id="@id/rl_total_point_layout" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_gravity="center" android:background="@drawable/bg_lotto_rount" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_centerHorizontal="true">
+                <ImageView android:id="@id/iv_cash_icon" android:layout_width="21.0dip" android:layout_height="21.0dip" android:layout_marginLeft="8.0dip" android:src="@drawable/ic_cash_white" android:layout_centerVertical="true" />
+                <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tv_use_ad_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="12.0dip" android:maxLines="2" android:layout_toEndOf="@id/iv_cash_icon" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <android.support.v4.view.ViewPager android:id="@id/vp_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/rl_ad_loading" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="50.0dip" android:layout_height="50.0dip" />
+    </RelativeLayout>
+</FrameLayout>

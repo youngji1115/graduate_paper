@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/profile" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/img_portrait_default" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/profile" android:layout_centerVertical="true">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/email" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="cashwalkID" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/point_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/point" android:drawableLeft="@drawable/ic_store_coin" android:drawablePadding="2.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/point" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <HorizontalScrollView android:id="@id/brand_layout" android:padding="4.0dip" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/brand" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <de.halfbit.pinnedsection.PinnedSectionListView android:id="@id/listView" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/grey" android:dividerHeight="2.0px" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

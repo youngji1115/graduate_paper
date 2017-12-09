@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_app_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_message" android:layout_centerVertical="true" />
+    <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:id="@id/tv_app_name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_send_notification_setting_msg" android:layout_toRightOf="@id/iv_app_icon" />
+    <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_app" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

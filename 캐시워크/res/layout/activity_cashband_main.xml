@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rl_band" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <ProgressBar android:id="@id/pb_band_loading" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/iv_band_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_disconnect" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="vertical" android:id="@id/li_band_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_toRightOf="@id/iv_band_icon" android:layout_centerVertical="true">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/tv_band_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="@string/cashband_menu_title_band_name" />
+                    <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_band_connect_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cashband_menu_title_band_connect_time" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/li_band_name">
+                    <ImageView android:id="@id/iv_band_battery" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="7.0dip" android:src="@drawable/img_battery_full" />
+                    <TextView android:textSize="13.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_band_battery" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" />
+                </LinearLayout>
+                <ImageView android:id="@id/iv_connect_arrow" android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:background="#ff80abab" android:layout_width="fill_parent" android:layout_height="203.0dip" android:layout_below="@id/rl_band">
+                <android.support.v4.view.ViewPager android:id="@id/vp_promotion" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <me.relex.circleindicator.CircleIndicator android:id="@id/ci_promotion" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <FrameLayout android:id="@id/fl_connect_btn" android:background="@drawable/bg_circle_connect" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true">
+                <TextView android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="연결" />
+            </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_notify" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="6.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/tv_notify_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/cashband_menu_title_notify" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_toRightOf="@id/tv_notify_title">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_kakao" />
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/ic_facebook_gray" />
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/ic_message" />
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/ic_call" />
+            </LinearLayout>
+            <ImageView android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_walk" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="1.0dip">
+            <ImageView android:id="@id/iv_walk_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_cashband_step" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/tv_walk_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cashband_menu_title_step" android:layout_toRightOf="@id/iv_walk_icon" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="44.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ProgressBar android:id="@id/progress_step" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="20.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:id="@id/tv_walk_step" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cashband_menu_text_step" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:id="@id/tv_walk_step_sub" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cashband_menu_text_step_sub" />
+            </LinearLayout>
+            <ImageView android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_sleep" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="1.0dip">
+            <ImageView android:id="@id/iv_sleep_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_cashband_sleep" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/tv_sleep_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cashband_menu_title_sleep" android:layout_toRightOf="@id/iv_sleep_icon" android:layout_centerVertical="true" />
+            <ProgressBar android:id="@id/progress_sleep" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="44.0dip" android:layout_alignParentRight="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:id="@id/tv_sleep_marks_sub" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="44.0dip" android:text="@string/cashband_menu_text_marks_sub" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/imageView14" android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_heartrate" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="6.0dip">
+            <ProgressBar android:id="@id/progress_heart" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="44.0dip" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/iv_heartrate_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_cashband_heartrate" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/tv_heartrate_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cashband_menu_title_heartrate" android:layout_toRightOf="@id/iv_heartrate_icon" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:id="@id/tv_heartrate_bpm" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="44.0dip" android:text="@string/cashband_menu_text_bpm" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <ImageView android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_guide" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="1.0dip">
+            <ImageView android:id="@id/iv_guide_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_directions_brown" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/tv_guide_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cashband_menu_title_guide" android:layout_toRightOf="@id/iv_guide_icon" android:layout_centerVertical="true" />
+            <ImageView android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_question" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="1.0dip">
+            <ImageView android:id="@id/iv_question_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_inquire_brown" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/iv_rl_question_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cashband_menu_title_question" android:layout_toRightOf="@id/iv_question_icon" android:layout_centerVertical="true" />
+            <ImageView android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_community" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="1.0dip">
+            <ImageView android:id="@id/iv_community_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_community_brown" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/iv_community_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cashband_menu_title_community" android:layout_toRightOf="@id/iv_community_icon" android:layout_centerVertical="true" />
+            <ImageView android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_setting" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <ImageView android:id="@id/iv_setting_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/btn_setting" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:id="@id/iv_setting_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/cashband_menu_title_setting" android:layout_toRightOf="@id/iv_setting_icon" android:layout_centerVertical="true" />
+            <ImageView android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_next_drawer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

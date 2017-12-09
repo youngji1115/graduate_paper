@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="120.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <ImageView android:id="@id/iv_kakao_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_kakao" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_send_notification_setting_kakao" android:layout_toRightOf="@id/iv_kakao_icon" />
+                <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_kakao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:textSize="12.0sp" android:textColor="#ffc7c7c7" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="50.0dip" android:layout_marginRight="70.0dip" android:text="@string/band_send_notification_setting_kakao_description" />
+        </LinearLayout>
+        <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_face_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_facebook_gray" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_send_notification_setting_face" android:layout_toRightOf="@id/iv_face_icon" />
+            <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_face" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_call_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_call" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_send_notification_setting_call" android:layout_toRightOf="@id/iv_call_icon" />
+            <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_msg_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_message" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_send_notification_setting_msg" android:layout_toRightOf="@id/iv_msg_icon" />
+            <android.support.v7.widget.SwitchCompat android:theme="@style/SwitchTheme" android:id="@id/sw_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:checked="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/rv_app_noti_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+        <RelativeLayout android:id="@id/rl_other_apps" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="1.0dip">
+            <ImageView android:id="@id/iv_plus_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_plus" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/band_send_notification_setting_other_plus" android:layout_toRightOf="@id/iv_plus_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

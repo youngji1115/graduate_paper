@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab id="@+id/tab_home" icon="@drawable/ic_home" title="@string/tab_home" />
+    <tab id="@+id/tab_stat" icon="@drawable/ic_stat" title="@string/tab_stat" />
+    <tab id="@+id/tab_timeline" icon="@drawable/ic_timeline" title="@string/tab_timeline" />
+    <tab id="@+id/tab_shop" icon="@drawable/ic_shop" title="@string/tab_shop" />
+    <tab id="@+id/tab_setting" icon="@drawable/ic_setting" title="@string/tab_setting" />
+</tabs>

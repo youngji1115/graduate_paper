@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="15.0sp" android:textColor="#80383838" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/band_setting_sport_add" />
+        <TextView android:textSize="13.0sp" android:textColor="#80383838" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/band_setting_sport_add_four" />
+        <android.support.v7.widget.RecyclerView android:id="@id/rv_sport_mode" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="25.0dip" />
+    </LinearLayout>
+</ScrollView>

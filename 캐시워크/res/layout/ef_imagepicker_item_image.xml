@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.esafirm.imagepicker.view.SquareFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:foregroundGravity="center"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <View android:id="@id/view_alpha" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.esafirm.imagepicker.view.SquareFrameLayout>

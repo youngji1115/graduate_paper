@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/red" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stepbet_stat_dropout" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/stepbet_stat_dropout_continue" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <Button android:textColor="@color/red" android:id="@id/no" android:background="@drawable/selector_btn_circle_white" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="16.0dip" android:text="@string/stepbet_stat_dropout_out" />
+        <Button android:textColor="@color/red" android:id="@id/yes" android:background="@drawable/selector_btn_circle_white" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="16.0dip" android:text="@string/stepbet_stat_dropout_retry" />
+    </LinearLayout>
+</LinearLayout>

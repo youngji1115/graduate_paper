@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="296.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="240.0dip" android:layout_height="134.0dip" android:layout_marginTop="18.0dip" android:src="@drawable/img_kakaonotice" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="34.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="34.0dip" android:text="@string/band_send_notification_setting_kakao_description" />
+    <TextView android:textSize="15.0sp" android:textColor="#ff5e5050" android:gravity="center" android:id="@id/tv_confirm" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="15.0dip" android:text="@string/confirm" />
+</LinearLayout>

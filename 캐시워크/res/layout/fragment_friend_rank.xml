@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_add_connect_option" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="71.0dip">
+        <ImageView android:id="@id/iv_add_connect_image" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_friends_contactadress_small" android:layout_centerVertical="true" />
+        <TextView android:textSize="13.0sp" android:textColor="#cc383838" android:id="@id/tv_add_connect_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="" android:layout_centerVertical="true" android:layout_toEndOf="@id/iv_add_connect_image" />
+        <TextView android:textSize="13.0sp" android:textColor="#cc383838" android:id="@id/tv_add_connect_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="닫기" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/tab_line" android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/top" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_add_connect_option">
+        <TextView android:textSize="14.0sp" android:textColor="@color/colorAccent" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/top" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/preperation_layout" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="75.0dip" android:layout_height="67.0dip" android:src="@drawable/ic_rankingsetting" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#80000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/stepbet_rank_preperation" />
+            <TextView android:textSize="16.0sp" android:textColor="#80000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/stepbet_rank_preperation_desc" />
+        </LinearLayout>
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipeRefresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/listView" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/grey" android:dividerHeight="6.0dip" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/li_not_friend" android:background="@color/grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/iv_not_friend_img" android:layout_width="fill_parent" android:layout_height="200.0dip" android:src="@drawable/img_not_friend" android:scaleType="centerCrop" android:layout_alignParentTop="true" />
+            <TextView android:textSize="16.0sp" android:textColor="#80000000" android:gravity="center" android:id="@id/tv_not_friend_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="가족 및 친구들과 함께 걸으며 건강한 습관을 \n같이 만들어 보세요." android:layout_below="@id/iv_not_friend_img" />
+            <RelativeLayout android:id="@id/rl_find_friend" android:background="@drawable/btn_add_friend" android:layout_width="130.0dip" android:layout_height="40.0dip" android:layout_marginTop="12.0dip" android:layout_below="@id/tv_not_friend_msg" android:layout_centerHorizontal="true">
+                <ImageView android:id="@id/iv_not_list_friend_plus_btn" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="9.0dip" android:src="@drawable/btn_friendplus" android:layout_centerVertical="true" />
+                <TextView android:textColor="#ff383838" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="친구 찾아보기" android:layout_toEndOf="@id/iv_not_list_friend_plus_btn" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/iv_watermark_image" android:visibility="invisible" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" android:src="@drawable/img_watermark_gray" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

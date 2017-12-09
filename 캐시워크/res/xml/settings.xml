@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preference_category" android:title="@string/settings_category_profile">
+        <Preference android:layout="@layout/preference_text" android:title="@string/profile_info" android:key="preference_profile_info" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_category" android:title="@string/settings_category_app">
+        <Preference android:layout="@layout/preference_plain" android:title="@string/update_version" android:key="preference_version" />
+        <Preference android:layout="@layout/preference_next" android:title="@string/setting_faq" android:key="preference_faq" />
+        <Preference android:layout="@layout/preference_next" android:title="@string/send_feedback" android:key="preference_feedback" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_category" android:title="@string/settings_category_lockscreen">
+        <SwitchPreference android:layout="@layout/preference_switch" android:title="@string/lockscreen_off" android:key="SETTINGS_SHOW_ON_LOCKSCREEN" android:defaultValue="true" />
+        <SwitchPreference android:layout="@layout/preference_switch" android:title="@string/settings_lockscreen_news" android:key="SETTINGS_LOCKSCREEN_NEWS" android:dependency="SETTINGS_SHOW_ON_LOCKSCREEN" android:defaultValue="true" />
+        <SwitchPreference android:layout="@layout/preference_switch" android:title="@string/settings_lockscreen_weather" android:key="SETTINGS_LOCKSCREEN_WEATHER" android:dependency="SETTINGS_SHOW_ON_LOCKSCREEN" android:defaultValue="true" />
+        <SwitchPreference android:layout="@layout/preference_switch" android:title="@string/settings_lockscreen_sound" android:key="SETTINGS_LOCKSCREEN_SOUND" android:dependency="SETTINGS_SHOW_ON_LOCKSCREEN" android:defaultValue="true" />
+        <SwitchPreference android:layout="@layout/preference_switch" android:title="@string/settings_lockscreen_vibration" android:key="SETTINGS_LOCKSCREEN_VIBRATION" android:dependency="SETTINGS_SHOW_ON_LOCKSCREEN" android:defaultValue="true" />
+        <Preference android:layout="@layout/preference_next" android:title="@string/lockscreen_change_bg" android:key="preference_wallpaper" />
+    </PreferenceCategory>
+</PreferenceScreen>

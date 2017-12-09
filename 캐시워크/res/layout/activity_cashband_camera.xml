@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.cameraview.CameraView android:id="@id/cv_camera_finder" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" app:facing="back" app:aspectRatio="4:3" app:autoFocus="true" app:flash="auto" />
+    <ImageView android:id="@id/iv_back_btn" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="13.0dip" android:src="@drawable/btn_back_white" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/iv_camera_shot" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/camera_shot_btn_selector" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/iv_camera_self" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="30.0dip" android:src="@drawable/btn_change" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <FrameLayout android:id="@id/fl_camera_preview" android:background="@color/white" android:visibility="invisible" android:layout_width="52.0dip" android:layout_height="52.0dip" android:layout_marginLeft="30.0dip" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_camera_preview" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="fitXY" />
+        </FrameLayout>
+    </RelativeLayout>
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_centerInParent="true" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/selector_bg_white_all" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image" android:layout_width="72.0dip" android:layout_height="72.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_toRightOf="@id/image" android:layout_centerVertical="true">
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_gray_thin" android:id="@id/brand" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/text_plain" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_store_coin" android:drawablePadding="4.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@id/section" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+</RelativeLayout>

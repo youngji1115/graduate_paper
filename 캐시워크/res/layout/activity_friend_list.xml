@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="55.0dip">
+                    <android.support.design.widget.TabLayout android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="55.0dip" app:tabIndicatorColor="#ff5e5050" app:tabIndicatorHeight="3.0dip" app:tabMode="fixed" app:tabGravity="fill" app:tabTextAppearance="@style/TabLayoutStyle" app:tabTextColor="#89000000" app:tabSelectedTextColor="#ff5e5050" />
+                    <ImageView android:id="@id/iv_request_new" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/img_n" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                <View android:id="@id/tab_line" android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/tabs" />
+                <RelativeLayout android:id="@id/rl_search_bar_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <ImageView android:id="@id/imageView8" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/btn_search" android:layout_centerVertical="true" />
+                    <EditText android:textSize="15.0sp" android:textColorHint="#cc383838" android:id="@id/et_input_search_text" android:background="#00000000" android:paddingRight="30.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="9.0dip" android:layout_marginRight="50.0dip" android:hint="친구이름 검색하기" android:maxLines="1" android:inputType="text" android:imeOptions="actionSearch" android:layout_toEndOf="@id/imageView8" />
+                    <ImageView android:id="@id/iv_reset_search_input_box" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/btn_delet" android:layout_centerVertical="true" android:layout_alignEnd="@id/et_input_search_text" />
+                    <TextView android:textSize="15.0sp" android:textColor="#cc383838" android:gravity="center" android:id="@id/tv_search_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="18.0dip" android:text="찾기" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rl_not_search_result" android:background="@color/grey" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="#7f000000" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="검색 결과가 없습니다." />
+                </RelativeLayout>
+                <View android:id="@id/search_line" android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/tabs" />
+                <android.support.v4.widget.SwipeRefreshLayout android:id="@id/refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </LinearLayout>
+            <RelativeLayout android:id="@id/rl_search_result_layout" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="98.0dip">
+                <android.support.v7.widget.RecyclerView android:id="@id/rv_search_result_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </RelativeLayout>
+            <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/rl_error" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="13.0sp" android:textColor="#7f000000" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="35.0dip" android:text="@string/error_try_again" android:lineSpacingExtra="5.0sp" />
+    </RelativeLayout>
+</RelativeLayout>

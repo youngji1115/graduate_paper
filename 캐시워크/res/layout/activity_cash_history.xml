@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_top_layout" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="148.0dip" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <TextView android:textSize="15.0sp" android:textColor="#ffffd200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="32.0dip" android:text="@string/cash_history_total_title" />
+        <ImageView android:id="@id/iv_cash_cion" android:layout_width="21.0dip" android:layout_height="21.0dip" android:src="@drawable/ic_cash_yellow" android:layout_alignTop="@id/tv_total_current_cash" android:layout_alignBottom="@id/tv_total_current_cash" android:layout_marginEnd="11.0dip" android:layout_toStartOf="@id/tv_total_current_cash" />
+        <TextView android:textSize="25.0sp" android:textColor="#ffffd200" android:id="@id/tv_total_current_cash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:layout_marginBottom="11.0dip" android:layout_above="@id/tv_cash_extinction_msg" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="10.0sp" android:textColor="#7ffefefe" android:gravity="center" android:id="@id/tv_cash_extinction_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="11.0dip" android:text="@string/cash_history_extinction_msg" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_center_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_top_layout" android:layout_alignParentStart="true">
+        <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <RelativeLayout android:id="@id/rl_top_title_layout" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="34.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="#7f000000" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="@string/cash_history_accumulate_title" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="#7f000000" android:gravity="center" android:id="@id/tv_total_accumulate_cash_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="@string/cash_history_accumulate_cash" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <TextView android:textSize="10.0sp" android:textColor="#7f000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cash_history_accumulate_cash_desc" android:layout_alignBaseline="@id/tv_total_accumulate_cash_title" android:layout_alignBottom="@id/tv_total_accumulate_cash_title" android:layout_toEndOf="@id/tv_total_accumulate_cash_title" />
+                <TextView android:textSize="20.0sp" android:textColor="#cc0024fe" android:gravity="center" android:id="@id/tv_total_accumulate_cash" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="15.0dip" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rl_center_title_layout" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="34.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="#7f000000" android:gravity="center|left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="@string/cash_history_used_title" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="#7f000000" android:gravity="center" android:id="@id/tv_lottery_total_accumulate_cash_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="@string/lotto" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <TextView android:textSize="20.0sp" android:textColor="#ccff0000" android:gravity="center" android:id="@id/tv_lottery_accumulate_total_cash" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <View android:background="#1a000000" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="15.0sp" android:textColor="#7f000000" android:gravity="center" android:id="@id/tv_use_shop_totcal_accumulate_cash_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:text="@string/main_store" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <TextView android:textSize="20.0sp" android:textColor="#ccff0000" android:gravity="center" android:id="@id/tv_use_shop_totcal_accumulate_cash" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="15.0dip" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_not_history" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="40.0dip" android:layout_below="@id/rl_top_layout">
+        <ImageView android:id="@id/iv_not_history_icon" android:layout_width="49.0dip" android:layout_height="49.0dip" android:src="@drawable/img_receipt" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="15.0sp" android:textColor="#7f000000" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/cash_history_not" android:layout_below="@id/iv_not_history_icon" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

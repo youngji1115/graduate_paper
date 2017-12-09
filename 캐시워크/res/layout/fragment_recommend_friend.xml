@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_add_connect_option" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="71.0dip">
+        <ImageView android:id="@id/iv_add_connect_image" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_friends_contactadress_small" android:layout_centerVertical="true" />
+        <TextView android:textSize="13.0sp" android:textColor="#cc383838" android:id="@id/tv_add_connect_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="" android:layout_centerVertical="true" android:layout_toEndOf="@id/iv_add_connect_image" />
+        <TextView android:textSize="13.0sp" android:textColor="#cc383838" android:id="@id/tv_add_connect_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="닫기" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/tab_line" android:background="#ffeaeaea" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_add_connect_option" />
+    <RelativeLayout android:id="@id/rl_not_content" android:background="#ffeeeeee" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_add_connect_option" android:layout_alignParentStart="true">
+        <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:gravity="center_horizontal" android:id="@id/textView3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/friend_not_recommend_friend" android:layout_below="@id/dummy_layout" android:lineSpacingExtra="8.0sp" android:layout_alignParentStart="true" />
+        <ImageView android:id="@id/iv_not_friend_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_friends" android:layout_above="@id/dummy_layout" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffaaaaaa" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="@string/friend_save_data_info" android:layout_alignParentBottom="true" />
+        <View android:textColor="#ff383838" android:id="@id/dummy_layout" android:layout_width="fill_parent" android:layout_height="26.0dip" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/rl_not_connect" android:background="#ffeeeeee" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <TextView android:textSize="14.0sp" android:textColor="#ff777777" android:gravity="center_horizontal" android:id="@id/tv_connect_info_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friend_connect_info" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:id="@id/rl_facebook_connect" android:background="@drawable/btn_facebook_connect" android:layout_width="155.0dip" android:layout_height="70.0dip" android:layout_marginTop="31.0dip" android:layout_below="@id/tv_connect_info_msg" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="12.0dip" android:layout_height="25.0dip" android:layout_marginLeft="30.0dip" android:src="@drawable/ic_friends_facebook" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#fffffefe" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="63.0dip" android:text="@string/friend_connect_facebook" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_contacts_connect" android:background="@drawable/btn_contacts_connect" android:layout_width="155.0dip" android:layout_height="70.0dip" android:layout_marginTop="15.0dip" android:layout_below="@id/rl_facebook_connect" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="25.0dip" android:layout_height="26.0dip" android:layout_marginLeft="30.0dip" android:src="@drawable/ic_friends_contactadress" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#fffffefe" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="63.0dip" android:text="@string/friend_connect_contacts" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="10.0sp" android:textColor="#ff383838" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="@string/friend_connect_info2" android:layout_below="@id/rl_contacts_connect" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

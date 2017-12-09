@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="280.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/text_plain" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="16.0dip" android:text="@string/main_coupon_review" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/text_gray_thin" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:text="@string/main_review_please" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:src="@drawable/img_star" />
+    <LinearLayout android:gravity="center" android:id="@id/review" android:background="@drawable/selector_btn_review" android:padding="12.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="8.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_google_play" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/main_coupon_review_go" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="16.0dip" android:weightSum="1.0">
+        <Button android:textSize="16.0sp" android:textColor="@color/colorAccent" android:id="@id/cancel" android:background="@drawable/selector_bg_next" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_weight="0.5" />
+        <View android:layout_gravity="center" android:background="@color/colorAccent" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textSize="16.0sp" android:textColor="@color/colorAccent" android:id="@id/confirm" android:background="@drawable/selector_bg_next" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/confirm" android:layout_weight="0.5" />
+    </LinearLayout>
+</LinearLayout>

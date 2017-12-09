@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v4.widget.NestedScrollView android:id="@id/nsv_default_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/rl_ad_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <RelativeLayout android:id="@id/above" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/profile" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/img_portrait_default" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/profile" android:layout_centerVertical="true">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/email" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="cashwalkID" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/point_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/text_plain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/point" android:drawableLeft="@drawable/ic_store_coin" android:drawablePadding="2.0dip" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/point" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rl_realtime_winner_info_layout" android:background="#00000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/rl_realtime_winner_info" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                        <ImageView android:id="@id/iv_lotto_winner_item_image" android:layout_width="39.0dip" android:layout_height="39.0dip" android:layout_marginLeft="10.0dip" android:layout_centerVertical="true" />
+                        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ff5e5050" android:gravity="center" android:id="@id/tv_lotto_winner_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="7분전" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_toEndOf="@id/iv_lotto_winner_item_image" />
+                        <TextView android:textSize="12.0sp" android:textColor="#ff383838" android:gravity="center|left" android:id="@id/tv_lotto_winner_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:text="장동건님이 비타500에 당첨되었습니다AAAAAAAAAAAAAAAAAAAAAAAAAA" android:maxLines="2" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_toStartOf="@id/iv_lotto_winner_congratulation" android:layout_toEndOf="@id/tv_lotto_winner_time" />
+                        <ImageView android:id="@id/iv_lotto_winner_congratulation" android:layout_width="32.0dip" android:layout_height="23.0dip" android:layout_marginRight="17.0dip" android:src="@drawable/ic_congratulation" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentTop="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/rl_add_friend_layout" android:background="#ffffffff" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="71.0dip">
+                    <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentTop="true" />
+                    <ImageView android:id="@id/iv_friend_plus" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_friendplus" android:layout_centerVertical="true" />
+                    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_toEndOf="@id/iv_friend_plus">
+                        <TextView android:textSize="13.0sp" android:textColor="#ccff0000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="친구가 많을 수록 당첨 확률이 높아집니다." />
+                        <TextView android:textSize="13.0sp" android:textColor="#cc383838" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="친구를 추가하고 당첨 확률을 높여보세요!" />
+                    </LinearLayout>
+                    <TextView android:textSize="13.0sp" android:textColor="#cc383838" android:gravity="center" android:id="@id/tv_close_add_friend_layout" android:layout_width="55.0dip" android:layout_height="fill_parent" android:text="@string/close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/now" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView android:id="@id/rv_item_list" android:background="#00000000" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyle" />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center|left|top" android:id="@id/profile" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginTop="4.0dip" android:src="@drawable/img_portrait_default" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@id/nickname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="aaaaaaaaaa" android:maxLines="1" android:lines="1" android:layout_toStartOf="@id/ago" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/text_gray" android:id="@id/ago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="100분" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+            <TextView android:textSize="12.0sp" android:textColor="#80383838" android:id="@id/tv_comment_report" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="댓글신고" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_fragment_base_layout" android:background="@color/text_plain" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/wallpaper_11" android:scaleType="centerCrop" />
+        <View android:id="@id/black_filter" android:background="@color/black_filter" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/weather" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </FrameLayout>
+    <ImageButton android:id="@id/setting" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_more" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+    <TextView android:textSize="72.0sp" android:textColor="@color/white" android:id="@id/lockscreen_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="56.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/lockscreen_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" android:layout_below="@id/lockscreen_time" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/msg_layout" android:layout_below="@id/lockscreen_date">
+        <fragment android:name="com.cashwalk.cashwalk.lockscreen.LockScreenCenterFragment" android:id="@id/fragment_center" android:layout_width="fill_parent" android:layout_height="340.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/tutorial_filter" android:background="@color/black_50" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/tutorial_image" android:layout_width="360.0dip" android:layout_height="360.0dip" android:scaleType="centerInside" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/msg_layout">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tutorial_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/lockscreen_tutorial_click" />
+        <ImageView android:layout_gravity="center" android:id="@id/tutorial_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:src="@drawable/tutorial_arrow_down" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/msg_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="2.0dip" android:layout_above="@id/fab_layout">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/msg" android:background="@drawable/im_talk" android:paddingLeft="12.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="18.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" />
+        <ImageView android:layout_gravity="center" android:id="@id/msg_touch" android:background="@drawable/tutorial_touch" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginBottom="4.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fab_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginBottom="28.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/fab" android:background="@null" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/im_coach_man" android:scaleType="centerCrop" />
+        <ImageButton android:id="@id/fab_return" android:background="@null" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_return" android:scaleType="centerCrop" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/fab_update_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle" />
+    </FrameLayout>
+    <TextView android:textSize="16.0sp" android:textColor="#bbffffff" android:id="@id/text_slide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48.0dip" android:text="@string/lockscreen_unlock" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/icon_slide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-8.0dip" android:layout_marginBottom="33.0dip" android:src="@drawable/ic_next_lockscreen" android:layout_toRightOf="@id/text_slide" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ad_layout_main" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="#bbffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lockscreen_unlock" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-8.0dip" android:src="@drawable/ic_next_lockscreen" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/adViewMain" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_navi_handle" android:layout_width="30.0dip" android:layout_height="100.0dip" android:layout_marginBottom="160.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/navi_handle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_navi_handle" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_navi_handle_new" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/img_n" android:layout_alignParentRight="true" android:layout_toStartOf="@id/navi_handle" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/bg_update_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyle" />
+</RelativeLayout>

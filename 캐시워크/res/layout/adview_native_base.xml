@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.gms.ads.formats.NativeAppInstallAdView android:id="@id/admobAppInstallRootView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.gms.ads.formats.NativeContentAdView android:id="@id/admobContentRootView" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/view_root" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/container_admob_express" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                <ProgressBar android:id="@id/progressView" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_centerInParent="true" />
+                <LinearLayout android:orientation="vertical" android:id="@id/view_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:gravity="center_vertical" android:padding="@dimen/list_item_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/iv_logo" android:layout_width="wrap_content" android:layout_height="30.0dip" android:adjustViewBounds="true" android:layout_centerVertical="true" />
+                        <TextView android:id="@id/tv_sponsor" android:text="Sponsored" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomText_Caption" />
+                        <TextView android:textStyle="bold" android:textColor="@color/colorAccent" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_item_container_padding" android:layout_marginRight="@dimen/list_item_container_padding" android:maxLines="1" android:layout_toLeftOf="@id/tv_sponsor" android:layout_toRightOf="@id/iv_logo" android:layout_centerVertical="true" style="@style/CustomText_Body" />
+                    </RelativeLayout>
+                    <com.facebook.ads.MediaView android:id="@id/native_ad_media" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="200.0dip" />
+                    <ImageView android:id="@id/iv_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+                    <TextView android:id="@id/tv_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/list_item_container_padding" android:layout_marginTop="@dimen/list_item_container_padding" android:layout_marginRight="@dimen/list_item_container_padding" style="@style/CustomText_Body" />
+                    <RelativeLayout android:orientation="horizontal" android:padding="@dimen/list_item_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/colorAccent" android:gravity="center" android:id="@id/tv_call_to_action" android:background="@drawable/ad_btn_square" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/CustomText_Body" />
+                        <TextView android:textColor="@android:color/black" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_etc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/list_item_container_padding" android:lines="2" android:layout_toLeftOf="@id/tv_call_to_action" android:layout_centerVertical="true" style="@style/CustomText_Body" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <RelativeLayout android:id="@id/view_ad_choice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </com.google.android.gms.ads.formats.NativeContentAdView>
+    </com.google.android.gms.ads.formats.NativeAppInstallAdView>
+</RelativeLayout>

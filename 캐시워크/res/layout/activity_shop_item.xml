@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.NestedScrollView android:background="@color/grey" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/purchase" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:background="@color/white" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="180.0dip" android:layout_height="180.0dip" android:layout_margin="16.0dip" android:scaleType="centerCrop" />
+                <View android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/brand" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/text_plain" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="20.0sp" android:textColor="@color/colorPrimaryDark" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_store_coin" android:drawablePadding="4.0dip" />
+                </LinearLayout>
+                <TextView android:textSize="12.0sp" android:textColor="@color/text_gray_thin" android:gravity="center" android:id="@id/expire" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_gray_thin" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <Button android:textSize="16.0sp" android:textColor="@color/colorAccent" android:gravity="center" android:id="@id/purchase" android:background="@drawable/selector_bg_next" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/purchase" android:layout_alignParentBottom="true" />
+    <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>
